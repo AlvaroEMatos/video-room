@@ -1,16 +1,18 @@
 # Video Room
 
+Watch videos together with your friends. This project creates a local server to watch videos through the browser synchronously with all users.
+
+Click on **start.bat** or **start.bat** (in windows) to run te server or using command **npm start**.
+
 ## Download
 
-download here
+Releases [here](https://github.com/AlvaroEMatos/video-room/releases).
 
-## Execute
+## Build
 
-click on start.bat or start.bat (in windows) to run te server
-or using npm start command
+- **npm run install** (for installing all node project dependencies)
+- **npm rum build** (for build project from dist folder)
 
-## Build command
+## Test
 
-- npm run install (for installing all node project dependencies)
-- npm rum build (for build project from dist folder)
-
+- **npm run dev**
