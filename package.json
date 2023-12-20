@@ -1,0 +1,23 @@
+{
+  "name": "video-room",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "concurrently --kill-others 'cd client && npm run start' 'cd server && npm run start-watch'",
+    "install": "npm install && concurrently 'cd client && npm install' 'cd server && npm install'",
+    "build": "concurrently 'cd client && npm run build && cd .. && cpy client/build/* dist/public' 'cpy server/* !server/videos/* dist' && cpy server/videos/*.md dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlvaroEMatos/video-room.git"
+  },
+  "author": "Alvaro E Matos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlvaroEMatos/video-room/issues"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "cpy-cli": "^5.0.0"
+  }
+}
