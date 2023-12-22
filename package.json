@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "concurrently --kill-others \"cd client && npm run start\" \"cd server && npm run start-watch\"",
     "install": "npm install && concurrently \"cd client && npm install\" \"cd server && npm install\"",
-    "build": "concurrently \"cd client && npm run build && cd .. && cpy client/build/* dist/public\" \"cpy server/* !server/videos/* dist\" && cpy server/videos/*.md dist"
+    "build": "concurrently \"cd client && npm run build && cd .. && cpy client/build/** dist/public\" \"cpy server/** !server/videos/* dist\""
   },
   "repository": {
     "type": "git",
