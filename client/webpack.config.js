@@ -14,10 +14,13 @@ module.exports = {
       directory: path.join(__dirname, 'public'),
     },
     proxy: {
-      '/api': {
+      '/': {
         target: 'http://localhost:3000',
         secure: false,
       }
+    },
+    headers: {
+      'Cache-Control': 'no-store',
     },
     hot: true,
     port: 3333,

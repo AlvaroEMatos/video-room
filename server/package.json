@@ -2,10 +2,11 @@
   "name": "video-room-server",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "server.js",
   "scripts": {
-    "start-watch": "nodemon server.js",
-    "start": "node server.js"
+    "start-watch": "nodemon src/server.js",
+    "start": "node src/server.js"
   },
   "author": "Álvaro E Matos",
   "license": "ISC",
