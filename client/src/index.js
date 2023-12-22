@@ -127,12 +127,14 @@ document.addEventListener('visibilitychange', handleVisibilityChange);
 document.body.addEventListener('click', handleBodyClick);
 
 //sockets event handles
-function handleConnection(currentVideo, newVideoState){
+function handleConnection(currentVideo){
+  currentVideo = currentVideo || '';
   videoTitle.textContent = currentVideo;
   video.src = `./videos/${currentVideo}`;
   console.log('start at video', currentVideo)
 }
 function handleChangeVideo(currentVideo){
+  currentVideo = currentVideo || '';
   videoTitle.textContent = currentVideo;
   video.src = `./videos/${currentVideo}`;
   videoState = new VideoState(video);
