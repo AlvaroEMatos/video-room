@@ -3,12 +3,12 @@ import {Server} from 'socket.io';
 import http from 'http';
 import path from 'path';
 import appRoot from 'app-root-path';
-import {listFiles} from './utilities/FSutilities.js';
+import {listFilesSync, forceOpendirSync} from './utilities/FSutilities.js';
 import CircularList from './utilities/CircularList.js';
 
 const PORT = 3000
-const VIDEOS_DIR = path.join(appRoot.path, 'videos');
-const PUBLIC_DIR = path.join(appRoot.path, 'public');
+const VIDEOS_DIR = forceOpendirSync(path.join(appRoot.path, 'videos'));
+const PUBLIC_DIR = forceOpendirSync(path.join(appRoot.path, 'public'));
 
 
 const app = express();
@@ -24,7 +24,7 @@ app.get('/videos', (req, res)=>{
 });
 
 //socket io
-var videoList = new CircularList(listFiles(VIDEOS_DIR));
+var videoList = new CircularList(listFilesSync(VIDEOS_DIR));
 var videoState = {};
 
 
