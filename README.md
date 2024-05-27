@@ -2,7 +2,7 @@
 
 Watch videos together with your friends. This project creates a local server to watch videos through the browser synchronously with all users.
 
-Click on **start.bat** or **start.bat** (in windows) to run te server or using command **npm start**.
+Click on **start.sh** or **start.bat** (in windows) to run te server or using command **npm start**.
 
 ## Download
 
